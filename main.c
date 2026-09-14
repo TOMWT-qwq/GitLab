@@ -2,5 +2,5 @@
 
 int main()
 {
-    printf("main\n");
+    printf("a sentence you want.\n");
 }
