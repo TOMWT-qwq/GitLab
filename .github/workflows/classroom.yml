@@ -40,7 +40,7 @@ jobs:
           expected-output: "PASS"
           comparison-method: contains
           timeout: 10
-          max-score: 200
+          max-score: 100
       - name: Autograding Reporter
         uses: classroom-resources/autograding-grading-reporter@v1
         continue-on-error: true
@@ -60,8 +60,8 @@ jobs:
           ok = os.environ.get("IO_OUTCOME") == "success"
           result = (os.environ.get("IO_RESULT") or "").strip()[:500]
           grade = {
-              "score": 200 if ok else 0,
-              "max_score": 200,
+              "score": 100 if ok else 0,
+              "max_score": 100,
               "passed": 1 if ok else 0,
               "total": 1,
               "tests": [
